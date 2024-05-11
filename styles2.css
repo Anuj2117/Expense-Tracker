@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.left-section {
+    padding:5%;
+    width: 40%;
+    height: 100vh;
+    margin-right: 20px;
+    border-right: 2px solid;
+}
+
+.right-section {
+    width: 70%;
+}
+
+.left-section h2 {
+    margin-bottom: 10px;
+}
+
+.left-section .form-group {
+    margin-bottom: 20px;
+}
+
+.left-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.left-section input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.left-section button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.left-section button:hover {
+    background-color: #0056b3;
+}
+
+.right-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.right-section h2 {
+    margin-bottom: 10px;
+}
+
+.right-section .form-group {
+    margin-bottom: 20px;
+}
+
+.right-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.right-section input[type="text"],
+.right-section input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.right-section button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.right-section button:hover {
+    background-color: #0056b3;
+}
+
+#expense-list {
+    margin-top: 20px;
+}
+
+.expense-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+#total-expense {
+    font-weight: bold;
+    margin-top: 20px;
+}
+#expense-chart-container {
+    width: 300px; /* Set desired width */
+    height: 300px; /* Set desired height */
+}
+
+#expense-chart {
+    margin-top: 30px;
+    max-width: 100%;
+    width: 100px; 
+    height: 100px;
+}
+#recommendations {
+    margin-top: 30px;
+}
+
+#taxes {
+    margin-top: 30px;
+}
