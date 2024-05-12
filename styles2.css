@@ -1,155 +1,4 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-}
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(bg\ 4.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -99;
-  }
-.left-section {
-    padding:5%;
-    width: 40%;
-    height: 100vh;
-    margin-right: 20px;
-    border-right: 2px solid;
-}
-
-.right-section {
-    width: 70%;
-}
-
-.left-section h2 {
-    margin-bottom: 10px;
-}
-
-.left-section .form-group {
-    margin-bottom: 20px;
-}
-
-.left-section label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.left-section input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.left-section button {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.left-section button:hover {
-    background-color: #0056b3;
-}
-
-.right-section h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.right-section h2 {
-    margin-bottom: 10px;
-}
-
-.right-section .form-group {
-    margin-bottom: 20px;
-}
-
-.right-section label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.right-section input[type="text"],
-.right-section input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.right-section button {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.right-section button:hover {
-    background-color: #0056b3;
-}
-
-#expense-list {
-    margin-top: 20px;
-}
-
-.expense-item {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-.expense-item:last-child {
-    border-bottom: none;
-}
-
-#total-expense {
-    font-weight: bold;
-    margin-top: 20px;
-}
-#expense-chart-container {
-    width: 300px; 
-    height: 300px; 
-}
-
-#expense-chart {
-    margin-top: 30px;
-    max-width: 100%;
-    width: 100px; 
-    height: 100px;
-}
-#recommendations {
-    margin-top: 30px;
-}
-
-#taxes {
-    margin-top: 30px;
-} */
+/* 
 
 
 body {
@@ -188,7 +37,7 @@ body {
 }
 
 .right-section {
-    width: 60%; /* Adjusted to make it smaller */
+    width: 60%;
 }
 
 .left-section h2 {
@@ -249,12 +98,147 @@ button:hover {
 
 #expense-chart {
     margin-top: 30px;
-    width: 100%; /* Adjusted to take full width */
-    max-width: 300px; /* Adjusted max-width */
-    height: auto; /* Adjusted height */
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
 }
 
 #recommendations,
 #taxes {
     margin-top: 30px;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    animation: fadeIn 0.5s ease forwards; /* Fade-in animation */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.left-section {
+    padding: 5%;
+    width: 40%;
+    height: 100vh;
+    margin-right: 20px;
+    border-right: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    animation: slideInLeft 0.5s ease forwards; /* Slide-in animation */
+}
+
+.right-section {
+    width: 60%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 0.5s ease forwards; /* Slide-in animation */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+button:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#expense-list {
+    margin-top: 20px;
+}
+
+.expense-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+#total-expense {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#expense-chart {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+#recommendations,
+#taxes {
+    margin-top: 30px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
