@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="background"></div>
+    <div class="background"></div>
     <div class="container">
         <div class="left-section">
             <h2>Salary Information</h2>
@@ -32,17 +32,23 @@
             </form>
         </div>
         <div class="right-section">
-            <h1>Expense Tracker</h1>
-            <div id="expense-list">
-                <h2>Expense List</h2>
+            <h1 class="center-heading">Expense Tracker</h1>
+            <div class="main-container">
+                <div class="expenses-container">
+                    <h2>Expense List</h2>
+                    <div id="expense-list"></div>
+                    <div id="total-expense"></div>
+                </div>
+                <div class="chart-container">
+                    <div id="expense-chart-container">
+                        <canvas id="expense-chart"></canvas>
+                    </div>
+                    <div id="recommendations"></div>
+                    <div id="taxes"></div>
+                </div>
             </div>
-            <div id="total-expense"></div>
-            <div id="expense-chart-container">
-                <canvas id="expense-chart"></canvas>
-            </div>
-            <div id="recommendations"></div>
-            <div id="taxes"></div>
         </div>
+        
     </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
