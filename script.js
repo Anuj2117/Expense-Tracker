@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // If matched, redirect to details page
             window.location.href = 'details.html';
         } else {
-            // If not matched, display an error message
+            
             alert('Invalid email or password. Please try again.');
         }
     });
