@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('login-form');
+    const form = document.querySelector('.login-box form');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
+        const email = document.querySelector('.input-box input[type="email"]').value;
+        const password = document.querySelector('.input-box input[type="password"]').value;
 
         // Check if the entered email exists in local storage
         const storedPassword = localStorage.getItem(email);
