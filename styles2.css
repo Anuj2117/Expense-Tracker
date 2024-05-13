@@ -69,7 +69,7 @@ body {
 }
 span{
     display: inline-block;
-    min-width: 100px;
+    min-width: 70px;
 }
 .expenses-container {
     width: 220%;
