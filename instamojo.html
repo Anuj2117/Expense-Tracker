@@ -1,45 +1,44 @@
-<html>
-  <head>
-    <script src="https://js.instamojo.com/v1/checkout.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Razorpay Payment</title>
+    
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <button id="payButton">Pay Now</button>
+
     <script>
-      /* Start client-defined Callback Handler Functions */
-      function onOpenHandler () {
-        alert('Payments Modal is Opened');
-      }
+        document.getElementById('payButton').addEventListener('click', function () {
+            var options = {
+                key: 'rzp_test_DYH0fycQiEAjgB', 
+                amount: 1000, 
+                currency: 'INR', 
+                name: 'Dummy Payment',
+                description: 'Test Payment',
+                image: 'https://example.com/logo.png', 
+                handler: function (response) {
+                    alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+                   
+                },
+                prefill: {
+                    name: 'John Doe',
+                    email: 'john.doe@example.com', 
+                    contact: '9999999999'
+                },
+                notes: {
+                    address: 'Razorpay Corporate Office' 
+                },
+                theme: {
+                    color: '#F37254'
+                }
+            };
 
-      function onCloseHandler () {
-        alert('Payments Modal is Closed');
-      }
-
-      function onPaymentSuccessHandler (response) {
-        alert('Payment Success');
-        console.log('Payment Success Response', response);
-      }
-
-      function onPaymentFailureHandler (response) {
-        alert('Payment Failure');
-        console.log('Payment Failure Response', response);
-      }
-      /* End client-defined Callback Handler Functions */
-
-      /* Configuring Handlers */
-      Instamojo.configure({
-        handlers: {
-          onOpen: onOpenHandler,
-          onClose: onCloseHandler,
-          onSuccess: onPaymentSuccessHandler,
-          onFailure: onPaymentFailureHandler
-        }
-      });
-      
-      function onButtonClick() {
-        Instamojo.open('http://www.instamojo.com/@t95067525');
-      }
+            var rzp = new Razorpay(options);
+            rzp.open();
+        });
     </script>
-  </head>
-  <body>
-    <button onclick="onButtonClick()">
-      Open Instapay
-    </button>
-  </body>
+</body>
 </html>
