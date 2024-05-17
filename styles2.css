@@ -30,7 +30,7 @@ body {
 }
 .left-section {
     padding:5%;
-    width: 40%;
+    width: 35%;
     margin-right: 10px;
     margin-left: 5px;
     border-right: 2px solid #ccc;
@@ -43,8 +43,9 @@ body {
 .right-section {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    width: 59%;
+    width: 63%;
     padding:3%;
     margin-right: 7px;
     background: linear-gradient(#93A5CF , #E4EfE9);
@@ -64,16 +65,15 @@ body {
 }
 
 .main-container {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    gap:20px;
     
 }
-span{
-    display: inline-block;
-    min-width: 70px;
-}
 .expenses-container {
-    width: 220%;
-    height: 70vh;
+    min-width: 50%;
+    min-height: 70vh;
     flex: 1;
     border: 1px solid;
     border-radius: 20px;
@@ -81,6 +81,9 @@ span{
 }
 
 .chart-container {
+    min-width: 46%;
+    min-height: 70vh;
+    padding:2%;
     border: 1px solid;
     border-radius: 20px;
     flex: 1;
@@ -201,5 +204,34 @@ button:hover {
     }
     to {
         transform: translateX(0);
+    }
+}
+
+@media screen and ( max-width:1250px){
+    span{
+        display: inline-block;
+        width:100px;
+    }
+}
+@media screen and (max-width:1010px) {
+    .contain {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .left-section{
+        width: 58%;
+        margin:20px;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
     }
 }
